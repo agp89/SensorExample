@@ -13,7 +13,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.widget.TextView;
 
-public class MainActivity extends Activity implements SensorEventListener {
+public class MainActivity extends Activity implements SensorEventListener
+{
 
 	private SensorManager sensManager;
 	private Sensor Accelerometer;
@@ -138,7 +139,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 				setValue(R.id.gyro_y, event.values[1]);
 				setValue(R.id.gyro_z, event.values[2]);
 				
-				Log.i("", "X/Y/Z: " + event.values[0] + "/" + event.values[1] + "/" + event.values[2] + "/" );
+				Log.i("GYROSCOPE", "X/Y/Z: " + event.values[0] + "/" + event.values[1] + "/" + event.values[2] + "/" );
 				break;
 		}
 	}
