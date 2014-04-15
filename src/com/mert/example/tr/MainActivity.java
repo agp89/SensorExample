@@ -16,7 +16,7 @@ import android.widget.TextView;
 public class MainActivity extends Activity implements SensorEventListener {
 
 	private SensorManager sensManager;
-	private Sensor Accelator;
+	private Sensor Accelerometer;
 	private Sensor Gyro;
 
 	@Override
@@ -31,7 +31,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 		List<Sensor> sensorenListe = sensManager.getSensorList(Sensor.TYPE_ACCELEROMETER);
 		if(sensorenListe.size() > 0)
 		{
-			Accelator = sensManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+			Accelerometer = sensManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 		}
 		else
 		{
@@ -60,7 +60,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 
 		// REGISTER SENSOR HERE DONT FORGOT TO UNREGISTER IT.
 		// ACCELATOR
-		sensManager.registerListener(MainActivity.this, Accelator,
+		sensManager.registerListener(MainActivity.this, Accelerometer,
 				SensorManager.SENSOR_DELAY_NORMAL);
 		// GYRO
 		sensManager.registerListener(MainActivity.this, Gyro,
@@ -82,7 +82,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 	{
 		// REGISTER SENSOR HERE DONT FORGOT TO UNREGISTER IT.
 		// ACCELATOR
-		sensManager.registerListener(MainActivity.this, Accelator,
+		sensManager.registerListener(MainActivity.this, Accelerometer,
 				SensorManager.SENSOR_DELAY_NORMAL);
 		// GYRO
 		sensManager.registerListener(MainActivity.this, Gyro,
